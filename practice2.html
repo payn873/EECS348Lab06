@@ -5,32 +5,34 @@
 <link href = "style2.css" rel = "stylesheet" type = "text/css">
 <script type = "text/javascript">
 function changeBorder(pR, pG, pB, bR, bG, bB, bW){
-document.getElementById("paragraph").style = "background-color: rgb(${pR},${pG},${pB}); border-width: ${bW}; border-color: rgb(${bR},${bG},${bB})";
+alert("This got here");
+document.getElementById("paragraph").style = "background-color: rgb(" + pR + ","+ pG + "," + pB + "); border-width: " + bW +"; border-color: rgb(" + bR + "," + bG + "," + bB + ")";
+alert("Second bit");
 }
 </script>
 <div id="paragraph">Science is three blind people stumbling across an elephant. One touches its side and thinks it is a wall, the second touches its leg and thinks it is a tree, and the third touches its trunk and thinks it is a snake. The three compare their data, and the first two scientists argue over whether the elephant is a giraffe or a rhino while the third is riducled for suggesting they have walked into someone's front yard where a snake is in a tree planted right near their house.</div>
 <p>Paragraph Color R(0-255)</p>
-<input type="text" id="pR" value>
+<input type="text" id="paR"/>
 <br>
 <p>Paragraph Color G(0-255)</p>
-<input type="text" id="pG" value>
+<input type="text" id="paG"/>
 <br>
 <p>Paragraph Color B(0-255)</p>
-<input type="text" id="pB" value>
+<input type="text" id="paB"/>
 <br>
 <p>Border Color R(0-255):</p>
-<input type="text" id="bR" value>
+<input type="text" id="boR"/>
 <br>
 <p>Border Color G(0-255):</p>
-<input type="text" id="bG" value>
+<input type="text" id="boG"/>
 <br>
 <p>Border Color B(0-255):</p>
-<input type="text" id="bB" value>
+<input type="text" id="boB"/>
 <br>
 <p>Border Width:</p>
-<input type="text" id="bW" value>
+<input type="text" id="boW"/>
 <br>
-<button onClick = "changeBorder(${pR},${pG},${pB},${bR},${bG},${bB},${bW});">Edit the Paragraph</button>
+<button onClick = "changeBorder(document.getElementById('paR').value, document.getElementById('paG').value, document.getElementById('paB').value, document.getElementById('boR').value, document.getElementById('boG').value, document.getElementById('boB').value, document.getElementById('boW').value);">Edit the Paragraph</button>
 
 
 </body></html>
