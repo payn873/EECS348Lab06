@@ -1,30 +1,36 @@
 <html>
 <head></head>
 <body>
-<h1>Alter this paragraph</h1>
+<h1>Alter This paragraph</h1>
+<link href = "style2.css" rel = "stylesheet" type = "text/css">
+<script type = "text/javascript">
+function changeBorder(pR, pG, pB, bR, bG, bB, bW){
+document.getElementById("paragraph").style = "background-color: rgb(${pR},${pG},${pB}); border-width: ${bW}; border-color: rgb(${bR},${bG},${bB})";
+}
+</script>
 <div id="paragraph">Science is three blind people stumbling across an elephant. One touches its side and thinks it is a wall, the second touches its leg and thinks it is a tree, and the third touches its trunk and thinks it is a snake. The three compare their data, and the first two scientists argue over whether the elephant is a giraffe or a rhino while the third is riducled for suggesting they have walked into someone's front yard where a snake is in a tree planted right near their house.</div>
 <p>Paragraph Color R(0-255)</p>
-<input type="text" id="paraColorR" value="">
+<input type="text" id="pR" value>
 <br>
 <p>Paragraph Color G(0-255)</p>
-<input type="text" id="paraColorG" value="">
+<input type="text" id="pG" value>
 <br>
 <p>Paragraph Color B(0-255)</p>
-<input type="text" id="paraColorB" value="">
+<input type="text" id="pB" value>
 <br>
 <p>Border Color R(0-255):</p>
-<input type="text" id="borderColorR" value="">
+<input type="text" id="bR" value>
 <br>
 <p>Border Color G(0-255):</p>
-<input type="text" id="borderColorG" value="">
+<input type="text" id="bG" value>
 <br>
 <p>Border Color B(0-255):</p>
-<input type="text" id="borderColorB" value="">
+<input type="text" id="bB" value>
 <br>
 <p>Border Width:</p>
-<input type="text" id="borderWidth" value="">
+<input type="text" id="bW" value>
 <br>
-<button type="button">Edit the Paragraph</button>
+<button onClick = "changeBorder(${pR},${pG},${pB},${bR},${bG},${bB},${bW});">Edit the Paragraph</button>
 
 
 </body></html>
