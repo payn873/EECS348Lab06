@@ -1,0 +1,24 @@
+<html>
+<head></head>
+<body>
+<script>
+function validate(pass1, pass2){
+	if(pass1.value != pass2.value){
+		alert("passwords do not match");
+	}else if(pass1.value.trim().length < 8){
+		alert("Password too short");
+	}else{
+		alert("You are all good");
+	}
+}
+</script>
+<h1>Password Check</h1>
+<p>First Password</p>
+<input type = "text" id = "p1"/>
+<p>Second Password</p>
+<input type = "text" id = "p2"/>
+<br>
+<button onClick = "validate(document.getElementById('p1'),document.getElementById('p2'));">Validate</button>
+</body>
+</html>
+
